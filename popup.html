@@ -9,45 +9,76 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
 
-      . {
+      * {
         margin: 0;
         padding: 0;
       }
 
+      .extension-window {
+        height: 500px;
+        width: 400px;
+      }
       body {
         background-color: #bae2ff;
         font-family: "Inter", sans-serif;
+        font-size: 20px;
+      }
+
+      .header-title {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .icon {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        height: 100px;
+        width: auto;
+      }
+
+      .on-off {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .time-to-next {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .time {
+        text-align: center;
+      }
+
+      .advanced-settings {
+        text-align: center;
+        text-transform: uppercase;
       }
     </style>
   </head>
 
   <body>
-    <div class="modal_header">
-      <h1 class="logo">
-        <img
-          class="header-title"
-          src="images/header-title.png"
-          alt="Image of header title"
-        />
-      </h1>
-    </div>
+    <div class="extension-window">
+      <div class="modal_header">
+        <h1 class="logo">
+          <img
+            class="header-title"
+            src="images/header-title.png"
+            alt="Image of header title"
+          />
+        </h1>
+      </div>
 
-    <div class="modal-content">
-      <img class="icon" src="icon_128.png" alt="Icon" />
-      <p>On/off</p>
-      <p>Time to next woof</p>
-      <p>00:20:30</p>
-      <p>Hour Min Sec</p>
-      <p class="advanced-settings">Advanced settings</p>
+      <div class="modal-content">
+        <img class="icon" src="icon_128.png" alt="Icon" />
+        <p class="on-off">On/off</p>
+        <p class="time-to-next">Time to next woof:</p>
+        <p class="time">00:00:00</p>
+        <p class="advanced-settings">Advanced settings</p>
+      </div>
     </div>
-
     <script src="popup.js"></script>
   </body>
 </html>
