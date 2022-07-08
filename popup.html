@@ -33,7 +33,7 @@
         margin-right: auto;
       }
 
-      .icon-button {
+      /* .icon-button {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -58,10 +58,38 @@
         background-repeat: no-repeat;
         border-radius: 50%;
         border: 0;
+      } */
+
+      input[type="checkbox"] {
+        display: none;
       }
 
-      .icon-button:hover {
-        background-color: white;
+      input[type="checkbox"] + label {
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 128px;
+        width: 128px;
+        background-image: url("icon-hd.png");
+        background-size: 128px;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        border: 0;
+      }
+
+      input[type="checkbox"]:checked + label {
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 128px;
+        width: 128px;
+        background-image: url("icon-hd-inverted.png");
+        background-size: 128px;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        border: 0;
       }
 
       .on-off {
@@ -98,7 +126,11 @@
       </div>
 
       <div class="modal-content">
-        <button class="icon-button"></button>
+        <!-- Extracted code http://jsfiddle.net/4huzr/ for button -->
+        <input type="checkbox" name="thing" value="valuable" id="thing" /><label
+          for="thing"
+          ><p class="onoff">On / Off</p></label
+        >
         <p class="on-off">On / off</p>
         <p class="time-to-next">Time to next woof:</p>
         <p class="time">00:00:00</p>
