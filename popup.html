@@ -6,16 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Notifurcation App</title>
 
-    <style></style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+
+      . {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #bae2ff;
+        font-family: "Inter", sans-serif;
+      }
+
+      .icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    </style>
   </head>
+
   <body>
     <div class="modal_header">
       <h1 class="logo">
-        <p>The Notifurcation App</p>
+        <img
+          class="header-title"
+          src="images/header-title.png"
+          alt="Image of header title"
+        />
       </h1>
     </div>
 
-    <div class="modal-content"><p>The Notifurcation App Description</p></div>
+    <div class="modal-content">
+      <img class="icon" src="icon_128.png" alt="Icon" />
+      <p>On/off</p>
+      <p>Time to next woof</p>
+      <p>00:20:30</p>
+      <p>Hour Min Sec</p>
+      <p class="advanced-settings">Advanced settings</p>
+    </div>
 
     <script src="popup.js"></script>
   </body>
