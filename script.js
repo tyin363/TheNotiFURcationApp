@@ -19,7 +19,7 @@ function fetchImage(){
                 div.appendChild(image)
                 parentdiv.appendChild(div)
             }
-        }
+        }       
     document.body.appendChild(parentdiv)
     });
 }
