@@ -26,7 +26,7 @@ function createAlarm() {
         "notifurcation",
         {
             delayInMinutes: 0,
-            periodInMinutes: 1
+            periodInMinutes: 1 // THIS IS THE TIME (IN MINUTES) FOR EACH ALARM
         }
     );
 }
