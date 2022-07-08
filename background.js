@@ -1,3 +1,6 @@
+var random = Math.floor(Math.random()* 100) +10;
+console.log(random)
+
 chrome.alarms.onAlarm.addListener(
     () => {
         chrome.notifications.create(

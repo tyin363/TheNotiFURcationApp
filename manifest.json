@@ -11,5 +11,8 @@
     "default_icon": "icon-128.png",
     "default_popup": "popup.html"
   },
-  "permissions": ["activeTab", "notifications", "alarms"]
+  "permissions": ["activeTab", "notifications", "alarms"],
+  "host_permissions": [
+    "<all_urls>"
+  ]
 }
