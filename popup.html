@@ -15,14 +15,16 @@
       }
 
       .extension-window {
-        height: 500px;
-        width: 400px;
+        height: 450px;
+        width: 350px;
       }
-    
+
       body {
+        margin: 20px 20px;
         background-color: #bae2ff;
         font-family: "Inter", sans-serif;
         font-size: 20px;
+        letter-spacing: 5px;
       }
 
       .header-title {
@@ -31,12 +33,23 @@
         margin-right: auto;
       }
 
-      .icon {
+      .icon-button {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        height: 100px;
-        width: auto;
+        height: 128px;
+        width: 128px;
+        background-image: url("icon-128.png");
+        background-repeat: no-repeat;
+        border-radius: 50%;
+      }
+
+      .icon-button:hover {
+        cursor: pointer;
+      }
+
+      .icon-button:hover {
+        background-color: white;
       }
 
       .on-off {
@@ -73,8 +86,8 @@
       </div>
 
       <div class="modal-content">
-        <img class="icon" src="icon_128.png" alt="Icon" />
-        <p class="on-off">On/off</p>
+        <button class="icon-button"></button>
+        <p class="on-off">On / off</p>
         <p class="time-to-next">Time to next woof:</p>
         <p class="time">00:00:00</p>
         <p class="advanced-settings">Advanced settings</p>
