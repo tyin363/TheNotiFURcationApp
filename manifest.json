@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Notifier App",
-  "description": "Notifier App Description",
+  "name": "The Notifurcation App",
+  "description": "The Notifurcation App",
   "version": "1.0.0",
   "icons": { "128": "icon_128.png" },
   "action": {
