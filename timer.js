@@ -19,6 +19,9 @@ btn.onclick = (event) => {
   event.preventDefault();
     console.log(times.selectedIndex);
     const x = times.selectedIndex;
+    if(x==3) {
+      timeleft = 0;
+    }
     if(x==2) {
         timeleft = 3600;
     }
@@ -26,7 +29,7 @@ btn.onclick = (event) => {
         timeleft = 1800
     }
     if(x==0) {
-        timeleft = 6
+        timeleft = 12
     }
     counter = 0
 }
