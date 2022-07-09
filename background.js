@@ -33,14 +33,18 @@ async function fetchImage() {
     });
 }
 
+var puns = ["Stay PAWsitive!", "What do you call an animal you keep in your car? A carPET", "What did the gym coach say to the cat? Have you paid your annual FLEAS?", "The cow crossed the road to get to the udder side", "I took my cat to the vet because she wasn't feline fine", "Rabbits love hip-hop.", "The pony wanted to drink water - his throat was horse!", "The sheep went to the Baaahamas for vacation", "What do you call an explosive monkey? A ba-boom", "What did the buffalo say when his son left home? Bison"];
+
+
 chrome.alarms.onAlarm.addListener(async () => {
+  random = Math.floor(Math.random() * 10); // 0 - 9
   chrome.notifications.create(
     {
       type: "image",
       iconUrl: "icon-128.png",
       imageUrl: await fetchImage(),
-      title: "Your notifurcation",
-      message: "STAY PAWSITIVE!",
+      title: "You've got a notiFURcation!",
+      message: puns[random],
       priority: 2,
       silent: false,
     },
