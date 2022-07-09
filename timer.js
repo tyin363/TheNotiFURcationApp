@@ -1,5 +1,24 @@
 var counter = 0;
-var timeleft = 1800;
+var timeleft = 6;
+
+const btn = document.querySelector('#x-button');
+const sb = document.querySelector('#time-intervals');
+btn.onclick = (event) => {
+    event.preventDefault();
+    console.log(sb.selectedIndex);
+    const x = sb.selectedIndex;
+    if(x==2) {
+        timeleft = 3600;
+    }
+    if(x==1) {
+        timeleft = 1800
+    }
+    if(x==0) {
+        timeleft = 6
+    }
+    counter = 0
+}
+
 
 function jsFunction() {
   var e = document.getElementById("time-intervals");
@@ -20,8 +39,14 @@ const countdown = () => {
   const countDate = new Date("July 17, 2022 00:00:00").getTime();
   const now = new Date().getTime();
   counter++;
-  const gap = timeleft - counter;
+  var gap = timeleft - counter;
   //const gap = countDate - now;
+
+  if(gap <= 0) {
+      gap = timeleft;
+      counter=0;
+      console.log(gap);
+  }
 
   const second = 1;
   const minute = second * 60;

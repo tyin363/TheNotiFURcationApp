@@ -189,7 +189,7 @@
         border-radius: 5px;
       }
 
-      .x-button {
+      #x-button {
         text-align: center;
         position: absolute;
         right: 15px;
@@ -206,7 +206,7 @@
       }
 
       #btn:active,
-      .x-button:active {
+      #x-button:active {
         background-color: #003c67;
       }
     </style>
@@ -278,6 +278,7 @@
           ><strong>Time between woofs</strong></label
         ><br />
         <select id="time-intervals">
+          <option value="0.1">6 secs</option>
           <option value="30">30 mins</option>
           <option value="60">60 mins</option>
         </select>
@@ -285,7 +286,7 @@
     </div>
 
     <br />
-    <button onclick="jsFunction()" class="x-button">X</button>
+    <button id="x-button">X</button>
     <button id="btn">SEND NOTIFURCATION</button>
 
     <script src="popup.js"></script>

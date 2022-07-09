@@ -56,6 +56,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 function createAlarm() {
   chrome.alarms.create("notifurcation", {
     delayInMinutes: 0,
-    periodInMinutes: 1, // THIS IS THE TIME (IN MINUTES) FOR EACH ALARM
+    periodInMinutes: 0.1, // THIS IS THE TIME (IN MINUTES) FOR EACH ALARM
   });
 }
