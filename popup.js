@@ -38,5 +38,12 @@ notificationElement.addEventListener("click", () => {
       initializeUi(response);
     });
   }
+  if(sb.selectedIndex == 3) {
+    console.log("memes");
+    chrome.runtime.sendMessage(['https://www.reddit.com/r/memes.json?limit=100', sendtime], (response) => {
+      console.log("memes");
+      initializeUi(response);
+    });
+  }
 
 });

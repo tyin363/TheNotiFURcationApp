@@ -2,6 +2,37 @@ var counter = 0;
 var timeleft = 6;
 
 /*
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  console.log(message);
+    timeleft = message[1] * 60;
+    console.log(topic);
+    console.log("timeleft:")
+    console.log(timeleft);
+    counter = 0;
+});
+*/
+
+const btn = document.querySelector("#btn");
+const times = document.querySelector("#time-intervals");
+
+btn.onclick = (event) => {
+  event.preventDefault();
+    console.log(times.selectedIndex);
+    const x = times.selectedIndex;
+    if(x==2) {
+        timeleft = 3600;
+    }
+    if(x==1) {
+        timeleft = 1800
+    }
+    if(x==0) {
+        timeleft = 6
+    }
+    counter = 0
+}
+
+
+/*
 const btn = document.querySelector('#x-button');
 const sb = document.querySelector('#time-intervals');
 btn.onclick = (event) => {
