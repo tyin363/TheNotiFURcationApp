@@ -12,7 +12,5 @@
     "default_popup": "popup.html"
   },
   "permissions": ["activeTab", "notifications", "alarms"],
-  "host_permissions": [
-    "<all_urls>"
-  ]
+  "host_permissions": ["<all_urls>"]
 }
