@@ -1,9 +1,10 @@
 var counter = 0;
 var timeleft = 1800;
 
-function jsFunction(value) {
+function jsFunction() {
+  var e = document.getElementById("time-intervals");
+  timeleft = e.value * 60;
   counter = 0;
-  timeleft = value * 60;
 }
 
 function leftPad(number, targetLength) {

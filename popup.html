@@ -251,14 +251,14 @@
         <label class="time-between-woofs"
           ><strong>Time between woofs</strong></label
         ><br />
-        <select id="time-intervals" onchange="jsFunction(this.value);">
+        <select id="time-intervals">
           <option value="30">30 mins</option>
           <option value="60">60 mins</option>
         </select>
       </div>
     </div>
 
-    <button id="btn">SEND NOTIFURCATION</button>
+    <button id="btn" onclick="jsFunction()">SEND NOTIFURCATION</button>
 
     <script src="popup.js"></script>
     <script src="timer.js"></script>
