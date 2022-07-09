@@ -1,5 +1,5 @@
 var counter = 0;
-var timeleft = 6;
+var timeleft = 0;
 
 /*
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
