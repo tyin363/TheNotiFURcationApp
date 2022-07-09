@@ -142,6 +142,42 @@
       option {
         padding: 10px;
       }
+
+      .countdown{
+    display: flex;
+    justify-content: space-around;
+  }
+
+.day, .hour, .minute, .second{
+    font-size: 2rem;
+}
+
+.flip-card{
+    display: inline-flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5)
+}
+
+.top, .bottom{
+    height: .25em;
+    line-height: 1;
+    padding: .25em;
+    overflow: hidden;
+  }
+.top{
+    background-color: #f7f7f7;
+    border-top-left-radius: .2em;
+    border-top-right-radius: .2em;
+  }
+
+.bottom{
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    border-bottom-left-radius: .2em;
+    border-bottom-right-radius: .2em;
+    
+  }
     </style>
   </head>
 
@@ -164,7 +200,25 @@
         ></label>
         <br />
         <p class="time-to-next"><strong>Time to next woof:</strong></p>
-        <p class="time">00:00:00</p>
+        <div class="countdown">
+          <div class=" flip-card container-day">
+            <div class="top top-day">Time</div>
+            <div class="bottom bottom-day">Time</div>
+          </div>
+
+          <div class="flip-card container-hour">
+            <div class="top top-hour">Time</div>
+            <div class="bottom bottom-hour">Time</div>
+          </div>
+          <div class="flip-card container-minute">
+            <div class="top top-minute">Time</div>
+            <div class="bottom bottom-minute">Time</div>
+          </div>
+          <div class="flip-card container-second">
+            <div class="top top-second">Time</div>
+            <div class="bottom bottom-second">Time</div>
+          </div>
+        </div>
         <button id="btn">SEND NOTIFURCATION</button>
       </div>
 
@@ -186,5 +240,6 @@
     </div>
 
     <script src="popup.js"></script>
+    <script src="timer.js"></script>
   </body>
 </html>

@@ -21,10 +21,15 @@ const countdown = () => {
     const textSecond = Math.floor((gap % minute)/ second);
     console.log(textSecond);
 
-    document.querySelector(".day").innerText = textDay;
-    document.querySelector(".hour").innerText = textHour;
-    document.querySelector(".minute").innerText = textMinute;
-    document.querySelector(".second").innerText = textSecond;
+    document.querySelector(".top-day").innerText = textDay;
+    document.querySelector(".top-hour").innerText = textHour;
+    document.querySelector(".top-minute").innerText = textMinute;
+    document.querySelector(".top-second").innerText = textSecond;
+
+    document.querySelector(".bottom-day").innerText = textDay;
+    document.querySelector(".bottom-hour").innerText = textHour;
+    document.querySelector(".bottom-minute").innerText = textMinute;
+    document.querySelector(".bottom-second").innerText = textSecond;
 
 };
 
