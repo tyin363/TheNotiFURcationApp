@@ -8,6 +8,7 @@
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
       * {
         margin: 0;
         padding: 0;
@@ -72,7 +73,7 @@
         margin-right: auto;
         height: 128px;
         width: 128px;
-        background-image: url("icon-hd-shadow.png");
+        background-image: url("icon-hd-shadow-inverted.png");
         background-size: 128px;
         background-repeat: no-repeat;
         border-radius: 50%;
@@ -86,7 +87,7 @@
         margin-right: auto;
         height: 128px;
         width: 128px;
-        background-image: url("icon-hd-shadow-inverted.png");
+        background-image: url("icon-hd-shadow.png");
         background-size: 128px;
         background-repeat: no-repeat;
         border-radius: 50%;
@@ -196,6 +197,7 @@
 
       .time-wording {
         font-size: 15px;
+        font-weight: lighter;
       }
     </style>
   </head>
@@ -241,13 +243,12 @@
         </div>
       </div>
 
-      <div class = "time-content"> 
-        <p class = "time-wording">&nbsp;&nbsp; day&nbsp;&nbsp;&nbsp;&nbsp; hour&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mins
-          &nbsp;&nbsp;&nbsp;&nbsp;secs
+      <div class="time-content">
+        <p class="time-wording">
+          &nbsp;&nbsp; day&nbsp;&nbsp;&nbsp;&nbsp;
+          hour&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mins &nbsp;&nbsp;&nbsp;&nbsp;secs
         </p>
       </div>
-
-    
 
       <div class="dropdown-content">
         <label class="picture-topic"><strong>Your picture topic</strong></label
@@ -269,7 +270,7 @@
       </div>
     </div>
 
-    <br>
+    <br />
 
     <button id="btn" onclick="jsFunction()">SEND NOTIFURCATION</button>
 
