@@ -3,6 +3,18 @@ const sb = document.querySelector('.animal-type');
 const time = document.querySelector('#time-intervals');
 var sendtime = 0;
 
+function changeBG() {
+  if (this.checked) {
+    console.log("this is working");
+    document.getElementById('body').style.backgroundImage = 'url(dog1.png)';
+  }
+  else {
+    document.getElementById('body').style.backgroundImage = 'url(dog2.png)';
+  }
+}
+
+document.getElementById('thing').addEventListener('change', changeBG);
+
 notificationElement.addEventListener("click", () => {
   if(time.selectedIndex == 0) {
     console.log('12s');
@@ -48,7 +60,7 @@ notificationElement.addEventListener("click", () => {
     }
     if(sb.selectedIndex == 3) {
       console.log("memes");
-      chrome.runtime.sendMessage(['https://www.reddit.com/r/memes.json?limit=100', sendtime], (response) => {
+      chrome.runtime.sendMessage(['https://www.reddit.com/r/AnimalMemes.json?limit=100', sendtime], (response) => {
         console.log("memes");
         initializeUi(response);
       });
