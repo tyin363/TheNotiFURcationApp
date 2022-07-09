@@ -1,6 +1,11 @@
 var counter = 0;
 var timeleft = 1800;
 
+function jsFunction(value)
+{
+    timeleft = value * 60;
+}
+
 function leftPad(number, targetLength) {
     var output = number + '';
     while (output.length < targetLength) {
@@ -28,7 +33,6 @@ const countdown = () => {
     const textHour = Math.floor((gap % day)/ hour);
     const textMinute = Math.floor((gap % hour)/ minute);
     const textSecond = Math.floor((gap % minute)/ second);
-    console.log(textSecond);
 
     document.querySelector(".top-day").innerText = leftPad(textDay, 2);
     document.querySelector(".top-hour").innerText = leftPad(textHour, 2);

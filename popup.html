@@ -251,7 +251,7 @@
         <label class="time-between-woofs"
           ><strong>Time between woofs</strong></label
         ><br />
-        <select class="time-intervals">
+        <select id="time-intervals" onchange="jsFunction(this.value);">
           <option value="30">30 mins</option>
           <option value="60">60 mins</option>
         </select>
