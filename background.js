@@ -1,16 +1,16 @@
-var random = Math.floor(Math.random() * 100) + 10;
-
-let count = 2;
 
 async function fetchImage() {
+
+    var random = Math.floor(Math.random() * 100);
+    console.log(random);
   //let parentdiv = document.createElement('div')
   //parentdiv.id = 'animal'
-  return fetch("https://www.reddit.com/r/Eyebleach.json?limit=10")
+  return fetch("https://www.reddit.com/r/Eyebleach.json?limit=100")
     .then((response) => response.json())
     .then((body) => {
       for (let index = 2; index < body.data.children.length; index++) {
-        if (body.data.children[index].data.post_hint == "image") {
-          let image = body.data.children[index].data.url_overridden_by_dest;
+        if (body.data.children[random].data.post_hint == "image") {
+          let image = body.data.children[random].data.url_overridden_by_dest;
           console.log(typeof image);
           console.log(typeof "icon-128.png");
           console.log(image);
@@ -25,8 +25,12 @@ async function fetchImage() {
           //div.appendChild(image)
           //parentdiv.appendChild(div)
         }
+        else {
+            random = Math.floor(Math.random() * 100);
+            console.log(random);
+        }
       }
-      //document.body.appendChild(parentdiv)
+      
     });
 }
 
