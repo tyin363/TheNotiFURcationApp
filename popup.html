@@ -20,7 +20,7 @@
       }
 
       body {
-        margin: 20px 20px;
+        margin: 30px 30px;
         background-color: #bae2ff;
         font-family: "Inter", sans-serif;
         font-size: 20px;
@@ -128,7 +128,8 @@
         text-align: center;
       }
 
-      .time-intervals {
+      .time-intervals,
+      .animal-type {
         background-color: #3aacff;
         position: relative;
         padding: 10px;
@@ -136,6 +137,10 @@
         outline: none;
         width: 250px;
         border-radius: 4px;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 4px;
       }
 
       option {
@@ -187,11 +192,6 @@
         text-transform: uppercase;
         font-size: 12px;
       }
-
-      .time-intervals {
-        color:white;
-      }
-
     </style>
   </head>
 
@@ -217,35 +217,38 @@
 
         <div class="countdown">
           <div class="flip-card container-day">
-            <div class="top top-day">Time</div>
-            <div class="bottom bottom-day">Time</div>
+            <div class="top top-day">20</div>
+            <div class="bottom bottom-day">20</div>
           </div>
 
           <div class="flip-card container-hour">
-            <div class="top top-hour">Time</div>
-            <div class="bottom bottom-hour">Time</div>
+            <div class="top top-hour">20</div>
+            <div class="bottom bottom-hour">20</div>
           </div>
           <div class="flip-card container-minute">
-            <div class="top top-minute">Time</div>
+            <div class="top top-minute">20</div>
             <div class="bottom bottom-minute">Time</div>
           </div>
           <div class="flip-card container-second">
-            <div class="top top-second">Time</div>
-            <div class="bottom bottom-second">Time</div>
+            <div class="top top-second">20</div>
+            <div class="bottom bottom-second">20</div>
           </div>
         </div>
       </div>
 
       <div class="dropdown-content">
-        <label class="picture-topic"><strong>Your picture topic</strong></label><br />
-        <select class="time-intervals">
+        <label class="picture-topic"><strong>Your picture topic</strong></label
+        ><br />
+        <select class="animal-type">
           <option value="dogs">Dogs</option>
           <option value="cats">Cats</option>
         </select>
       </div>
 
       <div class="dropdown-time">
-        <label class="time-between-woofs"><strong>Time between woofs</strong></label><br />
+        <label class="time-between-woofs"
+          ><strong>Time between woofs</strong></label
+        ><br />
         <select class="time-intervals">
           <option value="30">30 mins</option>
           <option value="60">60 mins</option>
