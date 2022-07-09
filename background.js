@@ -1,3 +1,5 @@
+var topic = '';
+var time = 0;
 
 async function fetchImage() {
 
@@ -5,14 +7,12 @@ async function fetchImage() {
     console.log(random);
   //let parentdiv = document.createElement('div')
   //parentdiv.id = 'animal'
-  return fetch("https://www.reddit.com/r/Eyebleach.json?limit=100")
+  return fetch(topic)
     .then((response) => response.json())
     .then((body) => {
       for (let index = 2; index < body.data.children.length; index++) {
         if (body.data.children[random].data.post_hint == "image") {
           let image = body.data.children[random].data.url_overridden_by_dest;
-          console.log(typeof image);
-          console.log(typeof "icon-128.png");
           console.log(image);
           return image;
 
@@ -27,7 +27,6 @@ async function fetchImage() {
         }
         else {
             random = Math.floor(Math.random() * 100);
-            console.log(random);
         }
       }
       
@@ -49,13 +48,24 @@ chrome.alarms.onAlarm.addListener(async () => {
   );
 });
 
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  if (request.time) createAlarm();
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  
+  console.log("there should be a message")
+  console.log(message);
+  if (Array.isArray(message)) {
+    topic = message[0];
+    time = message[1];
+    console.log(topic);
+    console.log(time);
+    createAlarm();
+  }
 });
 
 function createAlarm() {
+  console.log('true time');
+  console.log(time);
   chrome.alarms.create("notifurcation", {
     delayInMinutes: 0,
-    periodInMinutes: 0.1, // THIS IS THE TIME (IN MINUTES) FOR EACH ALARM
+    periodInMinutes: time, // THIS IS THE TIME (IN MINUTES) FOR EACH ALARM
   });
 }

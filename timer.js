@@ -1,6 +1,7 @@
 var counter = 0;
 var timeleft = 6;
 
+/*
 const btn = document.querySelector('#x-button');
 const sb = document.querySelector('#time-intervals');
 btn.onclick = (event) => {
@@ -18,7 +19,7 @@ btn.onclick = (event) => {
     }
     counter = 0
 }
-
+*/
 
 function jsFunction() {
   var e = document.getElementById("time-intervals");
