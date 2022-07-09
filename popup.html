@@ -107,6 +107,7 @@
       .time-to-next {
         text-align: center;
         text-transform: uppercase;
+        margin-bottom: 10px;
       }
 
       .time {
@@ -122,6 +123,7 @@
         position: relative;
         top: 15px;
         text-align: center;
+        margin-bottom: 15px;
       }
 
       .dropdown-time {
@@ -147,6 +149,7 @@
       .countdown {
         display: flex;
         justify-content: space-around;
+        margin-bottom: 20px;
       }
 
       .day,
@@ -182,6 +185,12 @@
         border-bottom-left-radius: 0.2em;
         border-bottom-right-radius: 0.2em;
       }
+
+      .picture-topic,
+      .time-between-woofs {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
     </style>
   </head>
 
@@ -204,6 +213,7 @@
         ></label>
         <br />
         <p class="time-to-next"><strong>Time to next woof:</strong></p>
+
         <div class="countdown">
           <div class="flip-card container-day">
             <div class="top top-day">Time</div>
@@ -223,11 +233,10 @@
             <div class="bottom bottom-second">Time</div>
           </div>
         </div>
-        <button id="btn">SEND NOTIFURCATION</button>
       </div>
 
       <div class="dropdown-content">
-        <label>Your picture topic</label><br />
+        <label class="picture-topic">Your picture topic</label><br />
         <select class="time-intervals">
           <option value="dogs">Dogs</option>
           <option value="cats">Cats</option>
@@ -235,13 +244,15 @@
       </div>
 
       <div class="dropdown-time">
-        <label>Time between woofs</label><br />
+        <label class="time-between-woofs">Time between woofs</label><br />
         <select class="time-intervals">
           <option value="30">30 mins</option>
           <option value="60">60 mins</option>
         </select>
       </div>
     </div>
+
+    <button id="btn">SEND NOTIFURCATION</button>
 
     <script src="popup.js"></script>
     <script src="timer.js"></script>
