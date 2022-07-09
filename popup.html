@@ -1,117 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Notifurcation App</title>
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+          @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
 
-      * {
-        margin: 0;
-        padding: 0;
-      }
+          * {
+              margin: 0;
+              padding: 0;
+          }
 
-      .extension-window {
-        height: 450px;
-        width: 400px;
-      }
+          .extension-window {
+              height: 450px;
+              width: 400px;
+          }
 
-      body {
-        margin: 20px 20px;
-        background-color: #bae2ff;
-        font-family: "Inter", sans-serif;
-        font-size: 20px;
-        letter-spacing: 5px;
-      }
+          body {
+              margin: 20px 20px;
+              background-color: #bae2ff;
+              font-family: "Inter", sans-serif;
+              font-size: 20px;
+              letter-spacing: 5px;
+          }
 
-      .header-title {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-        width: 350px;
-      }
+          .header-title {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              height: auto;
+              width: 350px;
+          }
 
-      /* .icon-button {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 128px;
-        width: 128px;
-        background-image: url("icon-hd.png");
-        background-size: 128px;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        border: 0;
-      }
-      .icon-button:active {
-        cursor: pointer;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 128px;
-        width: 128px;
-        background-image: url("icon-hd-inverted.png");
-        background-size: 128px;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        border: 0;
-      } */
+          /* .icon-button {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          height: 128px;
+          width: 128px;
+          background-image: url("icon-hd.png");
+          background-size: 128px;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          border: 0;
+        }
+        .icon-button:active {
+          cursor: pointer;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          height: 128px;
+          width: 128px;
+          background-image: url("icon-hd-inverted.png");
+          background-size: 128px;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          border: 0;
+        } */
 
-      input[type="checkbox"] {
-        display: none;
-      }
+          input[type="checkbox"] {
+              display: none;
+          }
 
-      input[type="checkbox"] + label {
-        cursor: pointer;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 128px;
-        width: 128px;
-        background-image: url("icon-hd-shadow.png");
-        background-size: 128px;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        border: 0;
-      }
+              input[type="checkbox"] + label {
+                  cursor: pointer;
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  height: 128px;
+                  width: 128px;
+                  background-image: url("icon-hd-shadow.png");
+                  background-size: 128px;
+                  background-repeat: no-repeat;
+                  border-radius: 50%;
+                  border: 0;
+              }
 
-      input[type="checkbox"]:checked + label {
-        cursor: pointer;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 128px;
-        width: 128px;
-        background-image: url("icon-hd-shadow-inverted.png");
-        background-size: 128px;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        border: 0;
-      }
+              input[type="checkbox"]:checked + label {
+                  cursor: pointer;
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  height: 128px;
+                  width: 128px;
+                  background-image: url("icon-hd-shadow-inverted.png");
+                  background-size: 128px;
+                  background-repeat: no-repeat;
+                  border-radius: 50%;
+                  border: 0;
+              }
 
-      .on-off {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 15px;
-      }
+          .on-off {
+              text-align: center;
+              text-transform: uppercase;
+              font-size: 15px;
+          }
 
-      .time-to-next {
-        text-align: center;
-        text-transform: uppercase;
-      }
+          .time-to-next {
+              text-align: center;
+              text-transform: uppercase;
+          }
 
-      .time {
-        text-align: center;
-      }
+          .time {
+              text-align: center;
+          }
 
-      .advanced-settings {
-        text-align: center;
-        text-transform: uppercase;
-      }
+          .advanced-settings {
+              text-align: center;
+              text-transform: uppercase;
+          }
 
         .dropdown-content {
             position: relative;
@@ -139,47 +139,45 @@
             padding: 10px;
         }
     </style>
-  </head>
+</head>
 
-  <body>
-      <div class="extension-window">
-          <div class="modal_header">
-              <h1 class="logo">
-                  <img class="header-title"
-                       src="images/title.png"
-                       alt="Image of header title" />
-              </h1>
-          </div>
+<body>
+    <div class="extension-window">
+        <div class="modal_header">
+            <h1 class="logo">
+                <img class="header-title"
+                     src="images/title.png"
+                     alt="Image of header title" />
+            </h1>
+        </div>
 
-          <div class="modal-content">
-              <!-- Extracted code http://jsfiddle.net/4huzr/ for button -->
-              <input type="checkbox" name="thing" value="valuable" id="thing" /><label for="thing"></label>
-              <p class="on-off"><strong>On</strong> / off</p><br>
-              <p class="time-to-next"><strong>Time to next woof:</strong></p>
-              <p class="time">00:00:00</p>
-              <button id="btn">SEND NOTIFURCATION</button>
-          </div>
+        <div class="modal-content">
+            <!-- Extracted code http://jsfiddle.net/4huzr/ for button -->
+            <input type="checkbox" name="thing" value="valuable" id="thing" /><label for="thing"></label>
+            <p class="on-off"><strong>On</strong> / off</p><br>
+            <p class="time-to-next"><strong>Time to next woof:</strong></p>
+            <p class="time">00:00:00</p>
+            <button id="btn">SEND NOTIFURCATION</button>
+        </div>
 
-          <div class="dropdown-content">
-              <label>Your picture topic</label><br />
-              <select class="time-intervals">
-                  <option value="dogs">Dogs</option>
-                  <option value="cats">Cats</option>
-              </select>
-          </div>
+        <div class="dropdown-content">
+            <label>Your picture topic</label><br />
+            <select class="time-intervals">
+                <option value="dogs">Dogs</option>
+                <option value="cats">Cats</option>
+            </select>
+        </div>
 
-          <div class="dropdown-time">
-              <label>Time between woofs</label><br />
-              <select class="time-intervals">
-                  <option value="30">30 mins</option>
-                  <option value="60">60 mins</option>
-                  <option value="random">Random</option>
-              </select>
-          </div>
-      </div>
+        <div class="dropdown-time">
+            <label>Time between woofs</label><br />
+            <select class="time-intervals">
+                <option value="30">30 mins</option>
+                <option value="60">60 mins</option>
+                <option value="random">Random</option>
+            </select>
+        </div>
+    </div>
 
-      
-
-      <script src="popup.js"></script>
-  </body>
+    <script src="popup.js"></script>
+</body>
 </html>
