@@ -94,10 +94,6 @@
         border: 0;
       }
 
-      .modal-content {
-        text-align: center;
-      }
-
       .on-off {
         text-align: center;
         text-transform: uppercase;
@@ -191,6 +187,11 @@
         text-transform: uppercase;
         font-size: 12px;
       }
+
+      .time-intervals {
+        color:white;
+      }
+
     </style>
   </head>
 
@@ -236,7 +237,7 @@
       </div>
 
       <div class="dropdown-content">
-        <label class="picture-topic">Your picture topic</label><br />
+        <label class="picture-topic"><strong>Your picture topic</strong></label><br />
         <select class="time-intervals">
           <option value="dogs">Dogs</option>
           <option value="cats">Cats</option>
@@ -244,7 +245,7 @@
       </div>
 
       <div class="dropdown-time">
-        <label class="time-between-woofs">Time between woofs</label><br />
+        <label class="time-between-woofs"><strong>Time between woofs</strong></label><br />
         <select class="time-intervals">
           <option value="30">30 mins</option>
           <option value="60">60 mins</option>
