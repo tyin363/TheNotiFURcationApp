@@ -1,6 +1,15 @@
 var counter = 0;
 var timeleft = 1800;
 
+function leftPad(number, targetLength) {
+    var output = number + '';
+    while (output.length < targetLength) {
+        output = '0' + output;
+    }
+
+    return output;
+}
+
 const countdown = () => {
     
     const countDate = new Date("July 17, 2022 00:00:00").getTime()
@@ -21,15 +30,15 @@ const countdown = () => {
     const textSecond = Math.floor((gap % minute)/ second);
     console.log(textSecond);
 
-    document.querySelector(".top-day").innerText = textDay;
-    document.querySelector(".top-hour").innerText = textHour;
-    document.querySelector(".top-minute").innerText = textMinute;
-    document.querySelector(".top-second").innerText = textSecond;
+    document.querySelector(".top-day").innerText = leftPad(textDay, 2);
+    document.querySelector(".top-hour").innerText = leftPad(textHour, 2);
+    document.querySelector(".top-minute").innerText = leftPad(textMinute, 2);
+    document.querySelector(".top-second").innerText = leftPad(textSecond, 2);
 
-    document.querySelector(".bottom-day").innerText = textDay;
-    document.querySelector(".bottom-hour").innerText = textHour;
-    document.querySelector(".bottom-minute").innerText = textMinute;
-    document.querySelector(".bottom-second").innerText = textSecond;
+    document.querySelector(".bottom-day").innerText = leftPad(textDay, 2);
+    document.querySelector(".bottom-hour").innerText = leftPad(textHour, 2);;
+    document.querySelector(".bottom-minute").innerText = leftPad(textMinute, 2);
+    document.querySelector(".bottom-second").innerText = leftPad(textSecond, 2);
 
 };
 
