@@ -112,16 +112,14 @@
       }
 
       .dropdown-content {
-        text-align: center;
-        position: absolute;
-        top: 325px;
-        left: 65px;
+        position: relative;
+        top: 15px;  
+        left: 50px;
       }
 
       .dropdown-time {
-        text-align: center;
-        position: absolute;
-        top: 400px;
+        position: relative;
+        top: 15px;
         left: 50px;
       }
 
@@ -138,17 +136,16 @@
   </head>
 
   <body>
-    <div class="extension-window">
-      <div class="modal_header">
-        <h1 class="logo">
-          <img
-            class="header-title"
-            src="images/header-title.png"
-            alt="Image of header title"
-          />
-        </h1>
-      </div>
+      <div class="extension-window">
+          <div class="modal_header">
+              <h1 class="logo">
+                  <img class="header-title"
+                       src="images/header-title.png"
+                       alt="Image of header title" />
+              </h1>
+          </div>
 
+<<<<<<< HEAD
       <div class="modal-content">
         <!-- Extracted code http://jsfiddle.net/4huzr/ for button -->
         <input type="checkbox" name="thing" value="valuable" id="thing" /><label
@@ -168,15 +165,35 @@
         <option value="60">60 mins</option>
       </select>
     </div>
+=======
+          <div class="modal-content">
+              <!-- Extracted code http://jsfiddle.net/4huzr/ for button -->
+              <input type="checkbox" name="thing" value="valuable" id="thing" /><label for="thing"></label>
+              <p class="on-off">On / off</p>
+              <p class="time-to-next">Time to next woof:</p>
+              <p class="time">00:00:00</p>
+              <button id="btn">SEND NOTIFURCATION</button>
+          </div>
+>>>>>>> 7efb68aa1390b41fdb9170d2e3d968a47af1e893
 
-    <div class="dropdown-time">
-      <label>Time between woofs</label><br />
-      <select class="time-intervals">
-        <option value="30">30 mins</option>
-        <option value="60">60 mins</option>
-        <option value="random">Random</option>
-      </select>
-    </div>
+          <div class="dropdown-content">
+              <label>Your picture topic</label><br />
+              <select class="time-intervals">
+                  <option value="dogs">Dogs</option>
+                  <option value="cats">Cats</option>
+              </select>
+          </div>
+
+          <div class="dropdown-time">
+              <label>Time between woofs</label><br />
+              <select class="time-intervals">
+                  <option value="30">30 mins</option>
+                  <option value="60">60 mins</option>
+                  <option value="random">Random</option>
+              </select>
+          </div>
+      </div>
+    
 
     <p class="advanced-settings">Advanced settings</p>
 
